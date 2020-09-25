@@ -20,10 +20,6 @@
 // 3. When both answers have been correctly inputed/validated then the computer should generate a random password that meets all inputed critera definitions. Password can either be displayed in an alert or written to the page.
 
 
-
-
-
-
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -38,3 +34,40 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+
+console.log("test")
+
+
+
+
+
+
+
+
+
+
+
+// MY OWN IDEAS // ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// // generate password
+// function generate(){
+//   // set password length and complexity
+//   let complexity = document.getElementById( ).value;
+
+//   let values = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+";
+
+//   let password = "";
+
+//   // create for loop to choose password characters
+
+//   for(var i=0; i<=complexity; i++){
+//     password = password + values.chartAt(Math.floor(Matt.random() * Matt.floor(values.length - 1)));
+
+//     // add password to textbox/display area
+
+//     document.getElementById("display").value = password;
+//   }
+
+// }
