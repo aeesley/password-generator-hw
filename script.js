@@ -48,9 +48,38 @@ var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
 var numeric = ["0","1","2","3","4","5","6","7","8","9"];
 var specialchar = ["+", "-", "&", "||", "!", "(", ")", "{", "}", "[", "]", "^","~", "*", "?", ":"];
 
+for(i=0; i<lowercase.length; i++){
+  console.log(lowercase[i]);
+}
+
+var userAnswers = {
+  length: wantsLength
+  lowercase: wantsLowerCase
+  uppercase: wantsUpperCase
+  numberic: wantsNumeric
 
 
+}
 
+// TUTOR SESSION //
+
+var wantsLowerCase = confirm("Do you want lower case characters include?");
+//if they choose true that value will store back in the wantsLowerCase variable
+console.log(wantsLowerCase);
+var userChoices = {
+  lowercase: wantsLowerCase
+
+}
+console.log(userChoices.lowercase);
+
+var wantsLength = prompt("How many characters should the password have?"); 
+console.log("Length chosen = " + wantsLength);
+
+// generate the numbe using the math floow thing and isntead of the * 10, and replace with the array.
+// another blank array, and the user selections populat the new array to choose from, then the math floor random thing picks from there. Add some functionality where it guarantees a certain output (in case the computer chooses only lowercase or something)
+
+// GET IT ON THE SCREEN
+// Grab ID from the box and do text content or append LOOK UP THE APPEND FUNCTION OR TEXT CONTENT
 
 
 // OTHER IDEAS // ----------------------------------------------------------------------------------------------------------------------------------------------------------------
