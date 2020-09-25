@@ -2,6 +2,7 @@
 
 // PSEUDO CODE //
 // 1. User clicks 'Generate Password button which starts a series of prompt questions from computer to user.
+
 // 2. User answers series of questions entering criteria into database.
 
     // PASSWORD GENERATOR QUESTIONS & CORRESPONDING CRITERIA 
@@ -35,6 +36,14 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+
+var lowercase = [abcdefghijklmnopqrstuvwxyz];
+var uppercase = [ABCDEFGHIJKLMNOPQRSTUVWXYZ];
+var numeric = [1234567890]
+var specialchar = [!@#$%^&*()_+];
+
+
+console.log("lowercase");
 
 
 console.log("test")
