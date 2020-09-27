@@ -42,12 +42,15 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+// START OF MY JAVASCRIPT CODE
 
-// arrays for password selectors //
+// arrays for password info //
 var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i","j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var numeric = ["0","1","2","3","4","5","6","7","8","9"];
 var specialchars = ["+", "-", "&", "||", "!", "(", ")", "{", "}", "[", "]", "^","~", "*", "?", ":"];
+
+// Blank array to store user selections so that computer can pull random characters from here to generate password based on user selections
 var userschoices = [];
 
 // map for user answers to store back into these variable answers //
@@ -63,10 +66,6 @@ var userAnswers = {
 
 function reWriteStats() {
   console.log(userAnswers.length);
-  console.log(userAnswers.lowercase);
-  console.log(UserAnswers.uppercase);
-  console.log(UserAnswers.numeric);
-  console.log(UserAnswers.specialchars);
 }
 
 // asking user to enter how many characters they want for length // 
@@ -82,6 +81,8 @@ console.log("Length chosen = " + wantsLength);
   else (wantsLength === wantsLength < 8 || wantsLength > 128 ); {
     alert("Please select a character count between 8 and 128 characters to continue.")
   }
+
+
 
 //confirm asking users if they want lowercase characters included //
 var wantsLowerCase = confirm("Do you want lower case characters included?");
@@ -155,6 +156,7 @@ console.log(userChoices.specialchars);
     else (wantsSpecialChars === false); {
       alert("Your password will not contain special characters.")
     }
+
 
 // having computer generate password // 
 for(var i=0; i<=userschoices.length; i++){
