@@ -73,15 +73,15 @@ function reWriteStats() {
 var wantsLength = prompt("How many characters would you like included in your password? Please enter a character count between 8 and 128."); 
 console.log("Length chosen = " + wantsLength);
 
-// confirming that users has selected a valid number of characters
-if (wantsLength === 8 < wantsLength < 128){
-  alert("Your password will contain " + wantsLength + " characters!");
-  reWriteStats();
-}
-//if user does not select the right character count they get this message 
-else (wantsLength === wantsLength < 8 || wantsLength > 128 ); {
-  alert("Please select a character count between 8 and 128 characters to continue.")
-}
+  // confirming that users has selected a valid number of characters
+  if (wantsLength === 8 < wantsLength < 128){
+    alert("Your password will contain " + wantsLength + " characters!");
+    reWriteStats();
+  }
+  //if user does not select the right character count they get this message 
+  else (wantsLength === wantsLength < 8 || wantsLength > 128 ); {
+    alert("Please select a character count between 8 and 128 characters to continue.")
+  }
 
 //confirm asking users if they want lowercase characters included //
 var wantsLowerCase = confirm("Do you want lower case characters included?");
@@ -93,15 +93,13 @@ var userChoices = {
 }
 console.log(userChoices.lowercase);
 
-// confirming user choices
-if (wantsLowerCase === true){
-  alert("Your password will contain lowercase characters!");
-  reWriteStats();
-}
-//if user does not select the right character count they get this message 
-else (wantsLength === wantsLength < 8 || wantsLength > 128 ); {
-  alert("Please select a character count between 8 and 128 characters to continue.")
-}
+  // confirming user choices
+  if (wantsLowerCase === true){
+    alert("Your password will contain lowercase characters!");
+  }
+  else (wantsLowerCase === false); {
+    alert("Your password will not contain lowercase characters.")
+  }
 
 // confirm asking users if they want uppercase included // 
 var wantsUpperCase = confirm("Do you want upper case characters included?");
@@ -113,6 +111,15 @@ var userChoices = {
 }
 console.log(userChoices.uppercase);
 
+    // confirming user choices
+  if (wantsUpperCase === true){
+    alert("Your password will contain uppercase characters!");
+  }
+  else (wantsUpperCase === false); {
+    alert("Your password will not contain uppercase characters.")
+  }
+
+
 // confirm asking users if they want number characters included // 
 var wantsNumeric = confirm("Do you want numeric characters included?");
 //if they choose true that value will store back in the wantsLowerCase variable
@@ -123,7 +130,13 @@ var userChoices = {
 }
 console.log(userChoices.numeric);
 
-var userSelections = 
+    // confirming user choices
+    if (wantsNumeric === true){
+      alert("Your password will contain numeric characters!");
+    }
+    else (wantsNumeric === false); {
+      alert("Your password will not contain numeric characters.")
+    }
 
 // confirm asking user if they want special characters included // 
 var wantsSpecialChars = confirm("Do you want numeric characters included?");
@@ -134,6 +147,14 @@ var userChoices = {
 
 }
 console.log(userChoices.specialchars);
+
+    // confirming user choices
+    if (wantsSpecialChars === true){
+      alert("Your password will contain special characters!");
+    }
+    else (wantsSpecialChars === false); {
+      alert("Your password will not contain special characters.")
+    }
 
 // having computer generate password // 
 for(var i=0; i<=userschoices.length; i++){
