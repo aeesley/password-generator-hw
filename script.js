@@ -70,14 +70,15 @@ function reWriteStats() {
 }
 
 // asking user to enter how many characters they want for length // 
-var wantsLength = prompt("How many characters should the password have?"); 
+var wantsLength = prompt("How many characters would you like included in your password? Please enter a character count between 8 and 128."); 
 console.log("Length chosen = " + wantsLength);
 
 // confirming that users has selected a valid number of characters
 if (wantsLength === 8 < wantsLength < 128){
-  alert("Your password will contain " + wantsLength " characters!")
+  alert("Your password will contain " + wantsLength + " characters!");
   reWriteStats();
 }
+//if user does not select the right character count they get this message 
 else (wantsLength === wantsLength < 8 || wantsLength > 128 ); {
   alert("Please select a character count between 8 and 128 characters to continue.")
 }
@@ -91,6 +92,16 @@ var userChoices = {
 
 }
 console.log(userChoices.lowercase);
+
+// confirming user choices
+if (wantsLowerCase === true){
+  alert("Your password will contain lowercase characters!");
+  reWriteStats();
+}
+//if user does not select the right character count they get this message 
+else (wantsLength === wantsLength < 8 || wantsLength > 128 ); {
+  alert("Please select a character count between 8 and 128 characters to continue.")
+}
 
 // confirm asking users if they want uppercase included // 
 var wantsUpperCase = confirm("Do you want upper case characters included?");
@@ -131,37 +142,3 @@ for(var i=0; i<=userschoices.length; i++){
 // add password to display // 
       document.getElementById("password").value = password;
 }
-
-// generate the numbe using the math floow thing and isntead of the * 10, and replace with the array.
-// another blank array, and the user selections populat the new array to choose from, then the math floor random thing picks from there. Add some functionality where it guarantees a certain output (in case the computer chooses only lowercase or something)
-
-// GET IT ON THE SCREEN
-// Grab ID from the box and do text content or append LOOK UP THE APPEND FUNCTION OR TEXT CONTENT
-
-
-// OTHER IDEAS // ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-// // generate password
-// function generate(){
-//   // set password length and complexity
-//   let complexity = document.getElementById( ).value;
-
-//   let values = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+";
-
-//   let password = "";
-
-//   // create for loop to choose password characters
-
-//   for(var i=0; i<=complexity; i++){
-//     password = password + values.chartAt(Math.floor(Matt.random() * Math.floor(values.length - 1)));
-
-//     // add password to textbox/display area
-
-//     document.getElementById("display").value = password;
-//   }
-
-// }
-
-//for(i=0; i<lowercase.length; i++){
-//   console.log(lowercase[i]);
-// }
