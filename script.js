@@ -46,24 +46,27 @@ generateBtn.addEventListener("click", writePassword);
 var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i","j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var numeric = ["0","1","2","3","4","5","6","7","8","9"];
-var specialchar = ["+", "-", "&", "||", "!", "(", ")", "{", "}", "[", "]", "^","~", "*", "?", ":"];
+var specialchars = ["+", "-", "&", "||", "!", "(", ")", "{", "}", "[", "]", "^","~", "*", "?", ":"];
+var userschoices = [];
 
 for(i=0; i<lowercase.length; i++){
   console.log(lowercase[i]);
 }
 
 var userAnswers = {
-  length: wantsLength
-  lowercase: wantsLowerCase
-  uppercase: wantsUpperCase
-  numberic: wantsNumeric
-
+  length: wantsLength,
+  lowercase: wantsLowerCase,
+  uppercase: wantsUpperCase,
+  numeric: wantsNumeric,
+  specialchars: wantsSpecialChars,
+  userchoices: userSelections
 
 }
 
-// TUTOR SESSION //
+var wantsLength = prompt("How many characters should the password have?"); 
+console.log("Length chosen = " + wantsLength);
 
-var wantsLowerCase = confirm("Do you want lower case characters include?");
+var wantsLowerCase = confirm("Do you want lower case characters included?");
 //if they choose true that value will store back in the wantsLowerCase variable
 console.log(wantsLowerCase);
 var userChoices = {
@@ -72,8 +75,37 @@ var userChoices = {
 }
 console.log(userChoices.lowercase);
 
-var wantsLength = prompt("How many characters should the password have?"); 
-console.log("Length chosen = " + wantsLength);
+
+var wantsUpperCase = confirm("Do you want upper case characters included?");
+//variable they choose will be stored back in empty array somehow?
+console.log(wantsUpperCase);
+var userChoices = {
+  uppercase: wantsUpperCase
+
+}
+console.log(userChoices.uppercase);
+
+
+var wantsNumeric = confirm("Do you want numeric characters included?");
+//if they choose true that value will store back in the wantsLowerCase variable
+console.log(wantsNumeric);
+var userChoices = {
+  numeric: wantsNumeric
+
+}
+console.log(userChoices.numeric);
+
+
+var wantsSpecialChars = confirm("Do you want numeric characters included?");
+//if they choose true that value will store back in the wantsLowerCase variable
+console.log(wantsSpecialChars);
+var userChoices = {
+  specialchars: wantsSpecialChars
+
+}
+console.log(userChoices.speacialchars);
+
+
 
 // generate the numbe using the math floow thing and isntead of the * 10, and replace with the array.
 // another blank array, and the user selections populat the new array to choose from, then the math floor random thing picks from there. Add some functionality where it guarantees a certain output (in case the computer chooses only lowercase or something)
