@@ -27,7 +27,7 @@
 // 3. When both answers have been correctly inputed/validated then the computer should generate a random password that meets all inputed critera definitions. Password can either be displayed in an alert or written to the page.
 
 
-// Assignment Code
+// ASSIGNMENT CODE GIVEN // 
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
@@ -42,17 +42,14 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-
+// arrays for password selectors //
 var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i","j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var numeric = ["0","1","2","3","4","5","6","7","8","9"];
 var specialchars = ["+", "-", "&", "||", "!", "(", ")", "{", "}", "[", "]", "^","~", "*", "?", ":"];
 var userschoices = [];
 
-for(i=0; i<lowercase.length; i++){
-  console.log(lowercase[i]);
-}
-
+// map for user answers to store back into these variable answers //
 var userAnswers = {
   length: wantsLength,
   lowercase: wantsLowerCase,
@@ -63,21 +60,23 @@ var userAnswers = {
 
 }
 
+// asking user to enter how many characters they want for length // 
 var wantsLength = prompt("How many characters should the password have?"); 
 console.log("Length chosen = " + wantsLength);
 
+//confirm asking users if they want lowercase characters included //
 var wantsLowerCase = confirm("Do you want lower case characters included?");
-//if they choose true that value will store back in the wantsLowerCase variable
 console.log(wantsLowerCase);
+
 var userChoices = {
   lowercase: wantsLowerCase
 
 }
 console.log(userChoices.lowercase);
 
-
+// confirm asking users if they want uppercase included // 
 var wantsUpperCase = confirm("Do you want upper case characters included?");
-//variable they choose will be stored back in empty array somehow?
+
 console.log(wantsUpperCase);
 var userChoices = {
   uppercase: wantsUpperCase
@@ -85,7 +84,7 @@ var userChoices = {
 }
 console.log(userChoices.uppercase);
 
-
+// confirm asking users if they want number characters included // 
 var wantsNumeric = confirm("Do you want numeric characters included?");
 //if they choose true that value will store back in the wantsLowerCase variable
 console.log(wantsNumeric);
@@ -95,7 +94,7 @@ var userChoices = {
 }
 console.log(userChoices.numeric);
 
-
+// confirm asking user if they want special characters included // 
 var wantsSpecialChars = confirm("Do you want numeric characters included?");
 //if they choose true that value will store back in the wantsLowerCase variable
 console.log(wantsSpecialChars);
@@ -135,4 +134,8 @@ console.log(userChoices.speacialchars);
 //     document.getElementById("display").value = password;
 //   }
 
+// }
+
+//for(i=0; i<lowercase.length; i++){
+//   console.log(lowercase[i]);
 // }
