@@ -42,6 +42,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+
 // arrays for password selectors //
 var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i","j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -60,9 +61,25 @@ var userAnswers = {
 
 }
 
+function reWriteStats() {
+  console.log(userAnswers.length);
+  console.log(userAnswers.lowercase);
+  console.log(UserAnswers.uppercase);
+  console.log(UserAnswers.numeric);
+  console.log(UserAnswers.specialchars);
+}
+
 // asking user to enter how many characters they want for length // 
 var wantsLength = prompt("How many characters should the password have?"); 
 console.log("Length chosen = " + wantsLength);
+
+// confirming that users has selected a valid number of characters
+if (wantsLength === 8 < wantsLength < 128){
+  alert("Your password will contain " + wantsLength " characters!")
+}
+else (wantsLength === | wantsLength < 8 OR wantsLength > 128 |){
+  alert("Please select a character count between 8 and 128 characters to continue.")
+}
 
 //confirm asking users if they want lowercase characters included //
 var wantsLowerCase = confirm("Do you want lower case characters included?");
@@ -94,6 +111,8 @@ var userChoices = {
 }
 console.log(userChoices.numeric);
 
+var userSelections = 
+
 // confirm asking user if they want special characters included // 
 var wantsSpecialChars = confirm("Do you want numeric characters included?");
 //if they choose true that value will store back in the wantsLowerCase variable
@@ -102,9 +121,15 @@ var userChoices = {
   specialchars: wantsSpecialChars
 
 }
-console.log(userChoices.speacialchars);
+console.log(userChoices.specialchars);
 
+// having computer generate password // 
+for(var i=0; i<=userschoices.length; i++){
+      password = password + values.chartAt(Math.floor(Matt.random() * Math.floor(userschoices.length - 1)));
 
+// add password to display // 
+      document.getElementById("password").value = password;
+}
 
 // generate the numbe using the math floow thing and isntead of the * 10, and replace with the array.
 // another blank array, and the user selections populat the new array to choose from, then the math floor random thing picks from there. Add some functionality where it guarantees a certain output (in case the computer chooses only lowercase or something)
