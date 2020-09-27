@@ -78,7 +78,7 @@ if (wantsLength === 8 < wantsLength < 128){
   alert("Your password will contain " + wantsLength " characters!")
   reWriteStats();
 }
-else (wantsLength === wantsLength < 8 || wantsLength > 128 ) {
+else (wantsLength === wantsLength < 8 || wantsLength > 128 ); {
   alert("Please select a character count between 8 and 128 characters to continue.")
 }
 
