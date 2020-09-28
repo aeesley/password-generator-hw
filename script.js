@@ -47,10 +47,6 @@ var userAnswers = {
 
 }
 
-function reWriteStats() {
-  console.log(userAnswers.length);
-}
-
 // asking user to enter how many characters they want for length // 
 var wantsLength = prompt("How many characters would you like included in your password? Please enter a character count between 8 and 128."); 
 console.log("Length chosen = " + wantsLength);
@@ -64,8 +60,6 @@ console.log("Length chosen = " + wantsLength);
   else (wantsLength === wantsLength < 8 || wantsLength > 128 ); {
     alert("Please select a character count between 8 and 128 characters to continue.")
   }
-
-
 
 //confirm asking users if they want lowercase characters included //
 var wantsLowerCase = confirm("Do you want lower case characters included?");
@@ -152,9 +146,8 @@ userData(userSelections);
 return userSelections;
 
 function userData(userSelections) {
-  document.getElementById("password").textContent = passData;
+  document.getElementById("password").textContent = userSelections;
 }
-
 
 
 // having computer generate password // 
