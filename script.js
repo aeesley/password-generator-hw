@@ -149,7 +149,6 @@ function userData(userSelections) {
   document.getElementById("password").textContent = userSelections;
 }
 
-
 // having computer generate password // 
 for(var i=0; i<=userschoices.length; i++){
       password = password + values.chartAt(Math.floor(Matt.random() * Math.floor(userschoices.length - 1)));
